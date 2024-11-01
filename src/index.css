@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: style1;
+  src: url(./assets/Fontspring-DEMO-juana-extralightit_toKzXEsfr.ttf);
+}
+
+@font-face {
+  font-family: style2;
+  src: url(./assets/HelveticaNowDisplay-Light_M4nzWhve6k_k7HolyzL10.woff2);
+}
+
+@font-face {
+  font-family: style3;
+  src: url(./assets/NeueMachina-Light_gwWCZxVuQl.ttf);
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+#section2{
+  position: relative;
+  perspective: 1500px;
+}
+
+
+#tiltDiv{
+  /* background-color: aqua; */
+  width: fit-content;
+}
+
+.rotateText{
+  transform-origin: 100% 70%;
+}
+
+/* .container{
+  width: 100%;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.container img{
+  top: 50%;
+  left: 50%;
+  object-fit: cover;
+} */
+
+.container {
+    /* Enables absolute positioning for child elements */
+  width: 55%;
+  height: 100%;  /* Make container fill the available height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.container img {
+  position: absolute;  /* Stack images on top of each other */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* Center image exactly in the container */
+  object-fit: cover;
+  z-index: 1;   /* Default stacking order */
+}
+
+.container img.topImage {
+  z-index: 2;   /* Higher z-index to appear on top */
+}
+
+
+#page3Container{
+  padding-inline: 30px;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.leftIcons,.rightIcons{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+#projectDisplay{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#projectDisplay img{
+  height: 220px;
+  /* width: 20vw; */
+  border-radius: 20%;
+  margin-top: 70px;
+  margin-bottom: 15px;
+}
+
+.projectCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
